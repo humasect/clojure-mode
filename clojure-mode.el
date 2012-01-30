@@ -330,7 +330,7 @@ elements of a def* forms."
                               "defmulti" "defmethod" "defmacro"
                               "defstruct" "deftype" "defprotocol"
                               "defrecord" "deftest"
-                              "defpage" "defpartial" "defproject"
+                              "defpage" "defpartial" "defproject" "defroutes"
                               "slice" "def\\[a-z\\]"
                               "defalias" "defhinted" "defmacro-"
                               "defn-memo" "defnk" "defonce-"
@@ -370,7 +370,7 @@ elements of a def* forms."
             "gen-class" "gen-and-load-class" "gen-and-save-class"
             "handler-case" "handle") t)
          "\\>")
-       1 font-lock-builtin-face)
+       1 font-lock-constant-face)
       ;; Built-ins
       (,(concat
          "(\\(?:clojure.core/\\)?"
@@ -528,7 +528,7 @@ elements of a def* forms."
          "\\>")
        1 font-lock-type-face)
       ;; Constant values (keywords), including as metadata e.g. ^:static
-      ("\\<^?:\\(\\sw\\|#\\)+\\>" 0 font-lock-constant-face)
+      ("\\<^?:\\(\\sw\\|#\\)+\\>" 0 font-lock-builtin-face)
       ;; Meta type annotation #^Type or ^Type
       ("#?^\\sw+" 0 font-lock-type-face)
       ("\\<io\\!\\>" 0 font-lock-warning-face)
